@@ -1,13 +1,16 @@
 package r;
 
-/**
- * Hello world!
- *
- */
-public class App 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class MainApp
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(MainAppConfig.class);
+
+        MyBean myBean = ctx.getBean(MyBean.class);
+
+        System.out.println("ok. Let go");
     }
 }
