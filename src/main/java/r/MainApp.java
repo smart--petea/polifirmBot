@@ -11,6 +11,6 @@ public class MainApp
 
         MyBean myBean = ctx.getBean(MyBean.class);
 
-        System.out.println("ok. Let go");
+        myBean.downloadIt();
     }
 }
